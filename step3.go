@@ -131,6 +131,32 @@ func sample8() {
 	printSlice(s) //[7]
 }
 
+func sample9() {
+	var s []int
+	printSlice(s)
+	if s == nil {
+		fmt.Println("nil!!")
+	}
+}
+
+func printSlice2(s string, x []int) {
+	fmt.Printf("%s len=%d cap=%d %v\n", s, len(x), cap(x), x)
+}
+
+func sample10() {
+	a := make([]int, 5)
+	printSlice2("a:", a)
+
+	b := make([]int, 0, 5)
+	printSlice2("b:", b)
+
+	c := b[:2]
+	printSlice2("c:", c)
+
+	d := c[2:5]
+	printSlice2("d:", d)
+}
+
 func main() {
-	sample8()
+	sample10()
 }
