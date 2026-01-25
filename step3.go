@@ -229,10 +229,10 @@ type Vertex2 struct {
 }
 
 var m = map[string]Vertex2{
-	"Bell Labs": Vertex2{
+	"Bell Labs": {
 		40.68433, -74.39967,
 	},
-	"Google": Vertex2{
+	"Google": {
 		37.42202, -122.08408,
 	},
 }
