@@ -27,7 +27,7 @@ func getComputerHand() string {
 	return hand
 }
 
-func jugdeWin(userHand, computerHand string) string {
+func judgeWin(userHand, computerHand string) string {
 	if userHand == computerHand {
 		return "Draw"
 	}
@@ -58,9 +58,9 @@ func playGame() Record {
 		fmt.Printf("\nあなた: %s\n", userHand)
 		fmt.Printf("あいて: %s\n", computerHand)
 
-		jugde := jugdeWin(userHand, computerHand)
+		judge := judgeWin(userHand, computerHand)
 
-		switch jugde {
+		switch judge {
 		case "Win":
 			fmt.Print("\nあなたの勝ちです！\n")
 			record.Win++
