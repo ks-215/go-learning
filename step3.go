@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strings"
 
 	"golang.org/x/tour/pic"
@@ -241,6 +242,43 @@ func sample16() {
 	fmt.Println(m)
 }
 
+func WordCount(s string) map[string]int {
+	var words = strings.Fields(s)
+	var m = make(map[string]int)
+
+	for _, word := range words {
+		m[word]++
+	}
+	return m
+}
+
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func sample17() {
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println(hypot(5, 12))
+
+	fmt.Println(compute(hypot))
+	fmt.Println(compute(math.Pow))
+
+}
+
+func fibona() func() int {
+	a, b := 0, 1
+	return func() int {
+		result := a
+		a, b = b, a+b
+		return result
+	}
+}
+
 func main() {
-	sample16()
+	f := fibona()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
 }
