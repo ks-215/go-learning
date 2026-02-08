@@ -2,3 +2,6 @@
 
 ## じゃんけんゲーム
 project\janken\main.go
+
+## TODOアプリ（CLIバージョン）
+project\todo-cli\main.go
