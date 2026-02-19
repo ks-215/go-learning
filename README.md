@@ -3,8 +3,8 @@
 ## ①じゃんけんゲーム
 project\janken\main.go
 
-## ②TODOアプリ（CLIバージョン）
+## ②TODOアプリ（CLI）
 project\todo-cli\main.go
 
-## ③TODOアプリ（WebAPIバージョン）
+## ③TODOアプリ（WebAPI）
 project\todo-api\main.go
