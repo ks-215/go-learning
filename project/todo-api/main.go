@@ -1,39 +1,19 @@
 package main
 
 import (
-	"net/http"
-	"sync"
+	"todo-api_lesson/handler"
 
 	"github.com/gin-gonic/gin"
 )
 
-type Task struct {
-	ID        int    `json:"id"`
-	Title     string `json:"title"`
-	Completed bool   `json:"completed"`
-}
-
-var (
-	tasks  []Task
-	nextID int = 1
-	mu     sync.Mutex
-)
-
-func getTodos(c *gin.Context) {
-	mu.Lock()
-	defer mu.Unlock()
-
-	c.JSON(http.StatusOK, tasks)
-}
-
 func main() {
 	r := gin.Default()
 
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	r.POST("/todos", handler.CreateTodo)
+	r.GET("/todos/:id", handler.GetTodo)
+	r.GET("/todos", handler.GetTodos)
+	r.DELETE("/todos/:id", handler.DeleteTodo)
+	r.PUT("/todos/:id", handler.CompleteTodo)
 
-	r.Run(":8080")
+	r.Run(":7777")
 }
