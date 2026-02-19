@@ -1,10 +1,10 @@
-# Goの学習記録
+# ＜Goの学習記録＞
 
-## じゃんけんゲーム
+## ①じゃんけんゲーム
 project\janken\main.go
 
-## TODOアプリ（CLIバージョン）
+## ②TODOアプリ（CLIバージョン）
 project\todo-cli\main.go
 
-## TODOアプリ（WebAPIバージョン）
+## ③TODOアプリ（WebAPIバージョン）
 project\todo-api\main.go
