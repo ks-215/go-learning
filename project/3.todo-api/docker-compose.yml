@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres
+    container_name: todo-api-postgres
+    env_file:
+      - .env
+    ports:
+      - "7777:5432"
+    volumes:
+      - posgre_data:/var/lib/postgresql/data
+
+volumes:
+  posgre_data:
