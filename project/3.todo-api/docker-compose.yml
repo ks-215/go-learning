@@ -7,7 +7,7 @@ services:
     ports:
       - "7777:5432"
     volumes:
-      - posgre_data:/var/lib/postgresql/data
+      - posgre_data:/var/lib/postgresql
 
 volumes:
   posgre_data:
